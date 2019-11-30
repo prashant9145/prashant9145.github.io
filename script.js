@@ -28,7 +28,7 @@ renderNotes(notes);
 // If false, the recording will stop after a few seconds of silence.
 // When true, the silence period is longer (about 15 seconds),
 // allowing us to keep recording even when the user pauses. 
-recognition.continuous = true;
+recognition.continuous = window.location.protocol === 'http:';
 
 // This block is called every time the Speech APi captures a line. 
 recognition.onresult = function(event) {
